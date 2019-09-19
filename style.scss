@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  text-align: center;
+}
+
+body {
+  font-family: 'Lato';
+}
+
+@import "nav";
+@import "card";
+
+.global-container {
+  position: relative;
+  min-height: 100vh;
+}
+.page-container {
+  padding-bottom: 2.5rem;
+  .hero {
+    background-color: #dedbdb73;
+    padding: 115px 40px 115px 40px;
+    margin: 0;
+    height: 50vh;
+  }
+  section.welcome article {
+    @include flexCenter(column);
+    margin: 2em;
+  }
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #333;
+  p {
+    color: #fff;
+    text-align: center;
+  }
+}
+
+/*Cookie Consent Begin*/
+#cookieConsent {
+  background-color: rgba(20, 20, 20, 0.8);
+  min-height: 26px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 26px;
+  padding: 8px 0 8px 30px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 9999;
+}
+#cookieConsent a {
+  color: #4b8ee7;
+  text-decoration: none;
+}
+#closeCookieConsent {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: -15px 0 0 0;
+  font-weight: bold;
+}
+#closeCookieConsent:hover {
+  color: #fff;
+}
+#cookieConsent a.cookieConsentOK {
+  background-color: #f1d600;
+  color: #000;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 20px;
+  cursor: pointer;
+  float: right;
+  margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+  background-color: #e0c91f;
+}
+/*Cookie Consent End*/
+
+/**
+   Desktop Navigation
+*/
+// Hide the desktop nav anything over 768px (small tablet)
+nav.desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .sticky + .page-container {
+    padding-top: 60px;
+  }
+  nav.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: deepskyblue;
+  }
+
+  .logo {
+    margin: 0 0 0 0.45em;
+  }
+
+  .navigation {
+    display: flex;
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 1em;
+      color: white;
+    }
+  }
+  .navigation a:hover {
+    background: #00ace6;
+  }
+  .mobile {
+    display: none;
+  }
+}
