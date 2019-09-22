@@ -1,0 +1,128 @@
+.page-container {
+    padding-bottom: 2.5rem;
+    .hero {
+      background-color: #dedbdb73;
+      position: relative;
+      top:0;
+      margin: 0;
+      height: 80vh;
+    }
+    section.welcome article {
+      @include flexCenter(column);
+      margin: 2em;
+    }
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+.welcome-container {
+    margin: 0 auto;
+    text-align: center;
+    h1 {
+      margin: 1em 0;
+    }
+    p { 
+      line-height: 1.7rem;
+    }
+    .left {
+      background: linear-gradient(160deg, #ec008c 0%, #a00087 100%);
+      padding: 1em;
+      h1, p {
+        color: #fff;
+      }
+    }
+    .right p {
+      margin: 2em 0 1em; 
+    }
+    .light {
+      color: rgba(255, 255, 255, .7)!important;
+      margin-top: 2em;
+    }
+    input, button {
+      width: calc(100% - 3em);
+      padding: .5em;
+      font-size: 1.3rem;
+      outline:none; 
+      margin: 1em;
+    }
+    button {
+      width: calc(100% - 2em);
+      margin: 0;
+      border: none; 
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .welcome-container {
+      button {
+        width: 60%!important; 
+      }
+      input {
+        width: calc(60% - 1em)!important;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .welcome-container {
+      p {
+        line-height: 1.7em !important; 
+      }
+      .inner {
+        display: flex;
+        flex: 2 55%;
+        .left {
+          text-align: left;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 50px 1em 1em;
+          .content {
+            padding: 0 3em;
+          }
+          h1 {
+            margin : 0;
+            font-size: 2.4em;
+            span {
+              display:block;
+            }
+          }
+        }
+        .right {
+          text-align: right;
+          align-self: center; 
+          padding: 0 2em 1.5em;
+          justify-self: center; 
+          
+          input {
+            width: calc(100% - 1em)!important;
+            margin: 1em 0;
+          }
+          button {
+            width: 100%!important;
+          }
+        }
+      }
+    }
+    .bg-welcome-container {
+      clip-path: inset(0 45% 0 0 );
+      position: absolute; 
+      top: 20%;
+      height: 70%;
+      z-index: 0;
+      width: 100%;
+      pointer-events: none;
+      .bg-welcome {
+        border: 3px solid rgba(255, 255, 255, .1);
+        width: 19%;
+        height: 80%;
+        float: left; 
+        margin-left: 1em;
+        transform: translateX(10%);
+      }
+    }
+  }

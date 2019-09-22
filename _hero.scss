@@ -1,0 +1,67 @@
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/hero-image-stacks.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    @include flexCenter(column);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 6em 3em 6em 3em;
+    h1 {
+      font-size: 3rem;
+    } 
+    p {
+      font-size: 1.3rem;
+      line-height: 2em;
+      margin: 2em 0 1em; 
+      padding: 0 250px 0 250px;
+    }
+    .light {
+      color: rgba(255, 255, 255, 0.7) !important;
+      margin-top: 1em;
+      font-size: 1.2rem;
+    }
+    
+    button {
+      width: 30%;
+      border: none; 
+      padding: .5em;
+      font-size: 1.3rem;
+      outline:none; 
+      margin: 1em;
+    }
+  }
+  .page-content {
+    position: relative;
+    top: 70px;
+    article {
+      @include flexCenter(column);
+      margin: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .hero-text p {
+      font-size: 1.3rem;
+      line-height: 2em;
+      margin: 2em 0 1em; 
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+    .hero-text p {
+      font-size: 1rem;
+    } 
+  }

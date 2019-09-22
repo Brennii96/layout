@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -12,36 +13,24 @@
 
 body {
   font-family: 'Lato';
+  background: #EEEEEE;
+  font-size: 16px;
+  height: 100vh;
 }
 
 @import "nav";
+@import "container-contents";
+@import "cta";
+@import "hero";
 @import "card";
+@import "testimonials";
 
 .global-container {
   position: relative;
   min-height: 100vh;
 }
-.page-container {
-  padding-bottom: 2.5rem;
-  .hero {
-    background-color: #dedbdb73;
-    padding: 115px 40px 115px 40px;
-    margin: 0;
-    height: 50vh;
-  }
-  section.welcome article {
-    @include flexCenter(column);
-    margin: 2em;
-  }
-  .team-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-}
 #footer {
-  position: absolute;
+  // position: absolute;
   bottom: 0;
   width: 100%;
   background: #333;
@@ -97,50 +86,3 @@ body {
   background-color: #e0c91f;
 }
 /*Cookie Consent End*/
-
-/**
-   Desktop Navigation
-*/
-// Hide the desktop nav anything over 768px (small tablet)
-nav.desktop {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  .sticky + .page-container {
-    padding-top: 60px;
-  }
-  nav.flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: deepskyblue;
-  }
-
-  .logo {
-    margin: 0 0 0 0.45em;
-  }
-
-  .navigation {
-    display: flex;
-    li {
-      list-style: none;
-    }
-    a {
-      text-decoration: none;
-      display: block;
-      padding: 1em;
-      color: white;
-    }
-  }
-  .navigation a:hover {
-    background: #00ace6;
-  }
-  .mobile {
-    display: none;
-  }
-}

@@ -1,0 +1,32 @@
+.cta-green {
+    text-transform: uppercase;
+    background: -webkit-gradient(linear, right top, left top, from(#0c874d), to(#44d691)) !important;
+    background: linear-gradient(270deg, #0c874d, #44d691) !important;
+    background-size: 400% 400% !important;
+    -webkit-animation: ctaGradient 8s ease infinite !important;
+    animation: ctaGradient 8s ease infinite !important;
+    -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+  }
+  
+  .cta-blue {
+    text-transform: uppercase;
+    background: -webkit-gradient(linear, right top, left top, from(#4ba6dd), to(#2b6589)) !important;
+    background: linear-gradient(270deg, #4ba6dd, #2b6589) !important;
+    background-size: 400% 400% !important;
+    -webkit-animation: ctaGradient 8s ease infinite !important;
+    animation: ctaGradient 8s ease infinite !important;
+    -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+  }
+  @-webkit-keyframes ctaGradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
