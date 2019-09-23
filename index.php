@@ -1,3 +1,22 @@
+<?php
+//https://stackoverflow.com/questions/6287903/how-to-properly-add-csrf-token-using-php
+
+//set token
+session_start();
+if (empty($_SESSION['token'])) {
+    $_SESSION['token'] = bin2hex(random_bytes(32));
+}
+$token = $_SESSION['token'];
+
+//verify token
+if (!empty($_POST['token'])) {
+    if (hash_equals($_SESSION['token'], $_POST['token'])) {
+        // Proceed to process the form data
+    } else {
+        // Log this as a warning and keep an eye on these attempts
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -111,6 +130,23 @@
                     to achieve at Book Printing UK.
                 </p>
             </article>
+            <div class="awards-container">
+                <div class="box">
+                    <div class="content">
+                        <h2>Digital Printing Award</h2>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="content">
+                        <h2>Digital Printing Award</h2>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="content">
+                        <h2>Digital Printing Award</h2>
+                    </div>
+                </div>
+            </div>
             <div class="main-gallery">
                     <div class="gallery-cell">
                       <div class="testimonial">
