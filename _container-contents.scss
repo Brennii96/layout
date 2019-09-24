@@ -55,7 +55,7 @@
     }
   }
   
-  @media only screen and (min-width: 768px) {
+  @include minMedia(768px) {
     .welcome-container {
       button {
         width: 60%!important; 
@@ -65,8 +65,8 @@
       }
     }
   }
-  
-  @media only screen and (min-width: 1024px) {
+
+  @include minMedia(1024px) {
     .welcome-container {
       p {
         line-height: 1.7em !important; 
